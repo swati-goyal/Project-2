@@ -1,6 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelector('#sign-in').onclick = function() {
-        var username = prompt("Enter username: ", "Nothing");
-        document.getElementById("demo").innerHTML = "Logged in as " + username;
-    };
+    const signIn = document.querySelector('button')
+    $(document).ready(function () {
+        $("#myBtn").click(function () {
+            $("#exampleModalCenter").modal();
+            $('#save').on('click', function () {
+                $('.navbar-text').text(`Logged in user: ` + $('#username').val());
+                signIn.disabled=true;
+            });
+        });
+    });
 });
