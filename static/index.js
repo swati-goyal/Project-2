@@ -36,5 +36,16 @@ document.addEventListener('DOMContentLoaded', () => {
             logoutButton.disabled = true;
             clickedSignIn();
         });
+    };
+
+    function clickedExit() {
+        $('#logout').click(function () {
+            $('.navbar-text').text("Logged out");
+            localStorage.removeItem('username');
+            //click on sign-in to join again!
+            signIn.disabled = false;
+            logoutButton.disabled = true;
+            clickedSignIn();
+        });
     }
 });
