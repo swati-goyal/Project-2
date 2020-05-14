@@ -21,22 +21,32 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
+    <style>
+        .form-inline>button {
+            margin-left: 10px;
+        }
+    </style>
 </head>
 
 <body>
     <nav class="navbar navbar-light bg-light justify-content-between">
+        <a class="navbar-brand" href="#">Flack</a>
         <span class="navbar-text">
             Not Logged in
-          </span>
+        </span>
         <form class="form-inline">
-          <button type="button" id="myBtn" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-            Sign In
-        </button>
+            <button type="button" id="myBtn" class="btn btn-primary" data-toggle="modal"
+                data-target="#exampleModalCenter">
+                Sign In
+            </button>
+            <button type="button" id="logout" class="btn btn-secondary">
+                Exit
+            </button>
         </form>
-      </nav>
+    </nav>
 
     <!-- Button trigger modal -->
-    
+
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
@@ -46,13 +56,12 @@
                 <div class="modal-body">
                     <form>
                         <div class="form-group">
-                          <label for="username" class="col-form-label">Choose a display name:</label>
-                          <textarea class="form-control" id="username"></textarea>
+                            <label for="username" class="col-form-label">Choose a display name:</label>
+                            <textarea class="form-control" id="username"></textarea>
                         </div>
-                      </form>
+                    </form>
                 </div>
                 <div class="modal-footer">
-                    <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
                     <button type="button" class="btn btn-primary" id="save" data-dismiss="modal">Enter</button>
                 </div>
             </div>
