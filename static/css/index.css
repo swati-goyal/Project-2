@@ -1,0 +1,54 @@
+.form-inline>button {
+    margin-left: 10px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+#enter-channel-btn {
+    padding: 20px 40px;
+    background: none;
+    border: none;
+    position: absolute;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+    cursor: pointer;
+    width: 30%;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+#enter-channel-btn:after,
+#enter-channel-btn:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border: 2px solid #000;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+    transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+#enter-channel-btn:after {
+    -webkit-transform: translate(3px, 3px);
+    transform: translate(3px, 3px);
+}
+
+#enter-channel-btn:before {
+    -webkit-transform: translate(-3px, -3px);
+    transform: translate(-3px, -3px);
+}
+
+#enter-channel-btn:hover:after,
+#enter-channel-btn:hover:before {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+}
